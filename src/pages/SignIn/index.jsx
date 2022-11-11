@@ -1,41 +1,33 @@
 import { Container, Form, Background } from "./styles";
-import { FiLogIn, FiMail, FiLock } from 'react-icons/fi'
+import { FiMail, FiLock } from "react-icons/fi";
 
-import { Input } from '../../components/Input';
-import { Button } from '../../components/Button';
+import { useAuth } from "../../hooks/auth";
+
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 import { Link } from "react-router-dom";
 
 export function SignIn() {
-    return (
-        <Container>
-            <Form>
-                <h1>Rocket Notes</h1>
-                <p>Aplicação par asalvar e gerenciar seus links uteis</p>
-                <h2>Faça seu login</h2>
+  const data = useAuth();
+  console.log("MEU CONTEXTO =>", data);
 
-                <Input
-                    placeholder="E-mail"
-                    type="text"
-                    icon={FiMail}
-                />
+  return (
+    <Container>
+      <Form>
+        <h1>Rocket Notes</h1>
+        <p>Aplicação par asalvar e gerenciar seus links uteis</p>
+        <h2>Faça seu login</h2>
 
-                <Input
-                    placeholder="Senha"
-                    type="password"
-                    icon={FiLock}
-                />
+        <Input placeholder="E-mail" type="text" icon={FiMail} />
 
-                <Button title="Entrar" />
+        <Input placeholder="Senha" type="password" icon={FiLock} />
 
-                <Link to="/register">
-                    Criar Conta
-                </Link>
+        <Button title="Entrar" />
 
-            </Form>
+        <Link to="/register">Criar Conta</Link>
+      </Form>
 
-            <Background />
-
-        </Container>
-
-    )
+      <Background />
+    </Container>
+  );
 }
