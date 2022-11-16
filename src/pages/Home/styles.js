@@ -73,7 +73,11 @@ export const NewNote = styled.button`
     align-items: center;
     justify-content: center;
 
+    > a {
+        color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    }
     svg{
         margin-right: 8px;
+        
     }
 `;

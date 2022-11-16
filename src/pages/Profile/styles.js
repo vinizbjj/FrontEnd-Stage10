@@ -15,7 +15,7 @@ width: 100%;
     padding: 0 124px;
 
     svg{
-        color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+        color: ${({ theme }) => theme.COLORS.GRAY_300};
         font-size: 24px;
     }
 
