@@ -1,8 +1,8 @@
-import { Header } from '../../components/Header'
-import { Input } from '../../components/Input'
-import { Textarea } from '../../components/Textarea'
-
-import { Container, Form } from './styles'
+import { Header } from "../../components/Header";
+import { Input } from "../../components/Input";
+import { Textarea } from "../../components/Textarea";
+import { useState } from "react";
+import { Container, Form } from "./styles";
 
 export function New() {
   return (
@@ -21,5 +21,5 @@ export function New() {
         </Form>
       </main>
     </Container>
-  )
+  );
 }

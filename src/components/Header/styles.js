@@ -20,7 +20,7 @@ export const Profile = styled.div`
     display: flex;
     align-items: center;
 
-    > img{
+    > a img{
         width: 56px;
         height: 56px;
         border-radius: 50%;
