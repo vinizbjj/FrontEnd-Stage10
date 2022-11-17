@@ -1,10 +1,23 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import { Textarea } from "../../components/Textarea";
+import { NoteItem } from "../../components/Noteitem";
+import { Section } from "../../components/Section";
+import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
-import { Textarea } from "../../components/Textarea";
-import { useState } from "react";
+
 import { Container, Form } from "./styles";
 
 export function New() {
+  const [links, setLinks] = useState([]);
+
+  function handleAddLink() {
+    setLinks((prevState) => [...prevState, newLink]);
+    const [newLink, setNewLink] = useState("");
+  }
+
   return (
     <Container>
       <Header />
